@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Foodie - Menu</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-reboot.min.css">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="../static/css/starter-template.css" rel="stylesheet">
+    <link href="../static/css/foodie.css" rel="stylesheet">
+</head>
+<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+<body>
+<nav class="navbar navbar-expand-md fixed-top nav toggler" id="top">
+    <div class="container">
+        <div class="logo">
+            <a href="#"><img src="../static/img/foodie1.png" class="img-fluid " alt="Responsive image"></a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="landingup.html" class="topbartext">Menu</a></li>
+                <li><a href="#" class="topbartext">Specials</a></li>
+                <li><a href="cart.html" class="topbartext activ">Cart</a></li>
+                <li>
+                    <div class="lab topbartext">
+                        <label class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                            Account
+                        </label>
+                        <div class="dropdown-menu" id="shift">
+                            <a class="dropdown-item" href="settings.html">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item out" href="registration/login.html">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+    </div>
+</nav>
+
+<main role="main" class="container">
+    <!--First Cart Item-->
+    <div class="row mx-auto" id="1">
+        <div class="col-lg-2 col-md-1"></div>
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card cardborder" id="card1">
+                <div class="card-body row">
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <img src="../static/img/meatpieN1-e1550605608381.jpg" alt="Meat pie"
+                             class="img-thumbnail rounded-circle">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="row mt-4">Meat Pie</div>
+                        <div class="row mb-2">₦750.30</div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <form id='myform' method='POST' action='#' class="mt-4">
+                            <input type='button' value='-' class='qtyminus' field='quantity'/>
+                            <input type='text' name='quantity' value='0' class='qty numborder'/>
+                            <input type='button' value='+' class='qtyplus' field='quantity' onclick="multiplyBy()"/>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="row mt-4 pt-1">₦750.15</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1">
+                        <a href="#" id="close">
+                            <img src="../static/img/clear-black-18dp/1x/baseline_clear_black_18dp.png"
+                                 class="mt-4 pt-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-1"></div>
+    </div>
+    <!--First Cart Item-->
+
+    <!--Second Cart Item-->
+    <div class="row mx-auto">
+        <div class="col-lg-2 col-md-1"></div>
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="card cardborder" id="card1">
+                <div class="card-body row">
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <img src="../static/img/Nugget1383770571120.jpeg" alt="Nugget"
+                             class="img-thumbnail rounded-circle">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="row mt-4">Chicken Nugget</div>
+                        <div class="row mb-2">₦150.90</div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <form id='myform' method='POST' action='#' class="mt-4">
+                            <input type='button' value='-' class='qtyminus' field='quantity'/>
+                            <input type='text' name='quantity' value='0' class='qty numborder'/>
+                            <input type='button' value='+' class='qtyplus' field='quantity'/>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="row mt-4 pt-1">₦750.15</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1">
+                        <a href="#">
+                            <img src="../static/img/clear-black-18dp/1x/baseline_clear_black_18dp.png"
+                                 class="mt-4 pt-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-1"></div>
+    </div>
+    <!--Second Cart Item-->
+
+    <!--Proceed Button-->
+    <div class="row">
+        <div class="col-6"></div>
+        <form action="#" class="signin col-6">
+            <br>
+            <button class="btn btn-lg btn-block proceed" type="submit"><span class="proceed">PROCEED        </span>
+                <img src="../static/img/arrow_forward-white-18dp/2x/baseline_arrow_forward_white_18dp.png" id="arrow"
+                     class="mb-1"></button>
+        </form>
+    </div>
+    <!--Proceed Button-->
+
+</main><!-- /.container -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<!-- Menu Script-->
+<script>
+    $('.navTrigger').click(function () {
+        $(this).toggleClass('active');
+        console.log("Clicked menu");
+        $("#mainListDiv").toggleClass("show_list");
+        $("#mainListDiv").fadeIn();
+    });
+</script>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body> -->
+
+<!--Cart Quantity + & - -->
+<script>
+    jQuery(document).ready(function () {
+        // This button will increment the value
+        $('.qtyplus').click(function (e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            fieldName = $(this).attr('field');
+            // Get its current value
+            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            // If is not undefined
+            if (!isNaN(currentVal)) {
+                // Increment
+                $('input[name=' + fieldName + ']').val(currentVal + 1);
+            } else {
+                // Otherwise put a 0 there
+                $('input[name=' + fieldName + ']').val(0);
+            }
+        });
+        // This button will decrement the value till 0
+        $(".qtyminus").click(function (e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            fieldName = $(this).attr('field');
+            // Get its current value
+            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            // If it isn't undefined or its greater than 0
+            if (!isNaN(currentVal) && currentVal > 0) {
+                // Decrement one
+                $('input[name=' + fieldName + ']').val(currentVal - 1);
+            } else {
+                // Otherwise put a 0 there
+                $('input[name=' + fieldName + ']').val(0);
+            }
+        });
+    });
+</script>
+<script>
+    function multiplyBy() {
+        num1 = document.getElementById("amount").value;
+        document.getElementById("result").innerHTML = num1;
+    }
+</script>
+<!--Remove Card Row 1-->
+<script>
+    $(document).ready(function () {
+        $("#close").click(function () {
+            $("#1").remove();
+        });
+    });
+</script>
+</body>
+</html>
