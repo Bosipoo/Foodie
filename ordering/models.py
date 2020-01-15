@@ -1,5 +1,7 @@
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -50,6 +52,17 @@ class User(AbstractUser):
     objects = UserManager()
 
 
+@receiver(post_save, sender=User)
+def create_customer(sender, instance, created, **kwargs):
+    if created:
+        Customer.objects.create(user=instance)
+
+
+@receiver(post_save, sender=User)
+def save_employee(sender, instance, **kwargs):
+    instance.customer.save()
+
+
 class Admin(models.Model):
     """This represents an administrator in our application"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -59,7 +72,7 @@ class Customer(models.Model):
     """This represents a customer in our application"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     address = models.TextField()
-    phone = models.IntegerField()
+    phone = models.IntegerField(null=True)
 
 
 class Payment(models.Model):
@@ -83,4 +96,6 @@ class SubGroup(models.Model):
 class Product(models.Model):
     """This represents a product in our application"""
     name = models.CharField(max_length=25)
+    # image = models.ImageField()
+    price = models.FloatField()
     subgroup = models.ForeignKey(SubGroup, on_delete=models.CASCADE)

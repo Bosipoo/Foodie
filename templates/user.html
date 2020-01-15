@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,12 +8,12 @@
     <title>Foodie - Menu</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-reboot.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-grid.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-reboot.min.css' %}">
 
     <style>
         .bd-placeholder-img {
@@ -31,21 +32,22 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="../static/css/starter-template.css" rel="stylesheet">
-    <link href="../static/css/foodie.css" rel="stylesheet">
+    <link href="{% static 'css/starter-template.css' %}" rel="stylesheet">
+    <link href="{% static 'css/foodie.css' %}" rel="stylesheet">
 </head>
-<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 <body>
 <nav class="navbar navbar-expand-md fixed-top nav toggler" id="top">
     <div class="container">
         <div class="logo">
-            <a href="#"><img src="../static/img/foodie1.png" class="img-fluid " alt="Responsive image"></a>
+            <a href="{% url 'menu' %}"><img src="{% static 'img/foodie1.png' %}" class="img-fluid "
+                                            alt="Responsive image"></a>
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
-                <li><a href="landingup.html" class="topbartext">Menu</a></li>
-                <li><a href="#" class="topbartext">Specials</a></li>
-                <li><a href="cart.html" class="topbartext">Cart</a></li>
+                <li><a href="{% url 'menu' %}" class="topbartext activ">Menu</a></li>
+                <li><a href="{% url 'menu' %}" class="topbartext">Specials</a></li>
+                <li><a href="{% url 'cart' %}" class="topbartext">Cart</a></li>
                 <li>
                     <div class="lab topbartext activ">
                         <label class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -53,9 +55,9 @@
                             Account
                         </label>
                         <div class="dropdown-menu" id="shift">
-                            <a class="dropdown-item" href="settings.html">Settings</a>
+                            <a class="dropdown-item" href="{% url 'user' %}">Settings</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item out" href="registration/login.html">Logout</a>
+                            <a class="dropdown-item out" href="{% url 'logout' %}">Logout</a>
                         </div>
                     </div>
                 </li>
@@ -81,25 +83,29 @@
     </div>
     <br>
     <div class="row center">
-        <form>
+        <form method="post" action="{% url 'edit' %}">
+            {% csrf_token %}
             <div class="row">
                 <div class="form-group col-6">
-                    <label for="firstname" class="set-label">Firstname</label>
-                    <input type="text" class="form-control" id="firstname" aria-describedby="firstname">
+                    <label for="firstname" class="set-label">First Name</label>
+                    <input type="text" class="form-control" id="firstname" aria-describedby="firstname"
+                           name="first_name" value="{{ user.first_name }}">
                 </div>
                 <div class="form-group col-6">
-                    <label for="lastname" class="set-label">Lastname</label>
-                    <input type="text" class="form-control" id="lastname" aria-describedby="lastname">
+                    <label for="lastname" class="set-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" aria-describedby="lastname" name="last_name"
+                           value="{{ user.last_name }}">
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-6">
-                    <label for="email" class="set-label">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="email">
+                    <label for="phone" class="set-label">Phone Number</label>
+                    <input type="number" class="form-control" id="phone" aria-describedby="phone" name="phone"
+                           value="{{ user.customer.phone }}">
                 </div>
                 <div class="form-group col-6">
-                    <label for="password" class="set-label">Password</label>
-                    <input type="password" class="form-control" id="password">
+                    <label for="address" class="set-label">Address</label>
+                    <textarea class="form-control" id="address" name="address">{{ user.customer.address }}</textarea>
                 </div>
             </div>
             <button type="submit" class="btn center set-button mx-auto">Update Settings</button>

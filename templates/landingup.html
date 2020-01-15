@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,12 +8,12 @@
     <title>Foodie - Menu</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-reboot.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-grid.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-reboot.min.css' %}">
 
     <style>
         .bd-placeholder-img {
@@ -31,21 +32,22 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="../static/css/starter-template.css" rel="stylesheet">
-    <link href="../static/css/foodie.css" rel="stylesheet">
+    <link href="{% static 'css/starter-template.css' %}" rel="stylesheet">
+    <link href="{% static 'css/foodie.css' %}" rel="stylesheet">
 </head>
-<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 <body>
 <nav class="navbar navbar-expand-md fixed-top nav toggler" id="top">
     <div class="container">
         <div class="logo">
-            <a href="#"><img src="../static/img/foodie1.png" class="img-fluid " alt="Responsive image"></a>
+            <a href="{% url 'menu' %}"><img src="{% static 'img/foodie1.png' %}" class="img-fluid "
+                                            alt="Responsive image"></a>
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
-                <li><a href="landingup.html" class="topbartext activ">Menu</a></li>
-                <li><a href="#" class="topbartext">Specials</a></li>
-                <li><a href="cart.html" class="topbartext">Cart</a></li>
+                <li><a href="{% url 'menu' %}" class="topbartext activ">Menu</a></li>
+                <li><a href="{% url 'menu' %}" class="topbartext">Specials</a></li>
+                <li><a href="{% url 'cart' %}" class="topbartext">Cart</a></li>
                 <li>
                     <div class="lab topbartext">
                         <label class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -53,9 +55,9 @@
                             Account
                         </label>
                         <div class="dropdown-menu" id="shift">
-                            <a class="dropdown-item" href="settings.html">Settings</a>
+                            <a class="dropdown-item" href="{% url 'user' %}">Settings</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item out" href="registration/login.html">Logout</a>
+                            <a class="dropdown-item out" href="{% url 'logout' %}">Logout</a>
                         </div>
                     </div>
                 </li>
@@ -99,7 +101,7 @@
 
                         <!--Card image-->
                         <div class="view overlay">
-                            <img src="../static/img/meatpieN1-e1550605608381.jpg" class="card-img-top product-img"
+                            <img src="{% static 'img/meatpieN1-e1550605608381.jpg' %}" class="card-img-top product-img"
                                  alt="">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
@@ -123,66 +125,66 @@
                 </div>
                 <!--Grid column-->
 
-                <!--Grid column-->
-                <div class="col-lg-4 col-md-6 mb-4">
-
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img src="../static/img/Nugget1383770571120.jpeg" class="card-img-top product-img" alt="">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <!--Card image-->
-
-                    </div>
-                    <!--Card-->
-                    <!--Card details-->
-                    <div class="row">
-                        <div class="col-3" style="vertical-align: middle;">
-                            <input type="number" min="0" max="100" step="1" placeholder="1" class="around mt-3">
-                        </div>
-                        <div class="col-9">
-                            <div class="row product-title">Chicken Nuggets</div>
-                            <div class="row product-sub">₦205.00</div>
-                        </div>
-                    </div>
-                    <!--Card details-->
-                </div>
-                <!--Grid column-->
-
-                <!--Third column-->
-                <div class="col-lg-4 col-md-6 mb-4">
-
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img src="../static/img/maggi-samosa-recipe-m.jpg" class="card-img-top product-img" alt="">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <!--Card image-->
-
-                    </div>
-                    <!--Card-->
-                    <!--Card details-->
-                    <div class="row">
-                        <div class="col-3" style="vertical-align: middle;">
-                            <input type="number" min="0" max="100" step="1" placeholder="1" class="around mt-3">
-                        </div>
-                        <div class="col-9">
-                            <div class="row product-title">Samosa</div>
-                            <div class="row product-sub">₦350.00</div>
-                        </div>
-                    </div>
-                    <!--Card details-->
-                </div>
+                {#                <!--Grid column-->#}
+                {#                <div class="col-lg-4 col-md-6 mb-4">#}
+                {##}
+                {#                    <!--Card-->#}
+                {#                    <div class="card">#}
+                {##}
+                {#                        <!--Card image-->#}
+                {#                        <div class="view overlay">#}
+                {#                            <img src="../static/img/Nugget1383770571120.jpeg" class="card-img-top product-img" alt="">#}
+                {#                            <a>#}
+                {#                                <div class="mask rgba-white-slight"></div>#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {#                        <!--Card image-->#}
+                {##}
+                {#                    </div>#}
+                {#                    <!--Card-->#}
+                {#                    <!--Card details-->#}
+                {#                    <div class="row">#}
+                {#                        <div class="col-3" style="vertical-align: middle;">#}
+                {#                            <input type="number" min="0" max="100" step="1" placeholder="1" class="around mt-3">#}
+                {#                        </div>#}
+                {#                        <div class="col-9">#}
+                {#                            <div class="row product-title">Chicken Nuggets</div>#}
+                {#                            <div class="row product-sub">₦205.00</div>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                    <!--Card details-->#}
+                {#                </div>#}
+                {#                <!--Grid column-->#}
+                {##}
+                {#                <!--Third column-->#}
+                {#                <div class="col-lg-4 col-md-6 mb-4">#}
+                {##}
+                {#                    <!--Card-->#}
+                {#                    <div class="card">#}
+                {##}
+                {#                        <!--Card image-->#}
+                {#                        <div class="view overlay">#}
+                {#                            <img src="../static/img/maggi-samosa-recipe-m.jpg" class="card-img-top product-img" alt="">#}
+                {#                            <a>#}
+                {#                                <div class="mask rgba-white-slight"></div>#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {#                        <!--Card image-->#}
+                {##}
+                {#                    </div>#}
+                {#                    <!--Card-->#}
+                {#                    <!--Card details-->#}
+                {#                    <div class="row">#}
+                {#                        <div class="col-3" style="vertical-align: middle;">#}
+                {#                            <input type="number" min="0" max="100" step="1" placeholder="1" class="around mt-3">#}
+                {#                        </div>#}
+                {#                        <div class="col-9">#}
+                {#                            <div class="row product-title">Samosa</div>#}
+                {#                            <div class="row product-sub">₦350.00</div>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                    <!--Card details-->#}
+                {#                </div>#}
                 <!--Third column-->
 
             </div>
@@ -208,7 +210,7 @@
 
                         <!--Card image-->
                         <div class="view overlay">
-                            <img src="../static/img/meatpieN1-e1550605608381.jpg" class="card-img-top product-img"
+                            <img src="{% static 'img/meatpieN1-e1550605608381.jpg' %}" class="card-img-top product-img"
                                  alt="">
                             <a>
                                 <div class="mask rgba-white-slight"></div>
@@ -233,65 +235,65 @@
                 <!--Grid column-->
 
                 <!--Grid column-->
-                <div class="col-lg-4 col-md-6 mb-4">
-
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img src="../static/img/Nugget1383770571120.jpeg" class="card-img-top product-img" alt="">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <!--Card image-->
-
-                    </div>
-                    <!--Card-->
-                    <!--Card details-->
-                    <div class="row">
-                        <div class="col-3" style="vertical-align: middle;">
-                            <input type="number" min="0" max="100" step="1" placeholder="1" class="around mt-3">
-                        </div>
-                        <div class="col-9">
-                            <div class="row product-title">Pepper Soup</div>
-                            <div class="row product-sub">750</div>
-                        </div>
-                    </div>
-                    <!--Card details-->
-                </div>
-                <!--Grid column-->
-
-                <!--Third column-->
-                <div class="col-lg-4 col-md-6 mb-4">
-
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img src="../static/img/maggi-samosa-recipe-m.jpg" class="card-img-top product-img" alt="">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <!--Card image-->
-
-                    </div>
-                    <!--Card-->
-                    <!--Card details-->
-                    <div class="row">
-                        <div class="col-3" style="vertical-align: middle;">
-                            <input type="number" min="0" max="100" step="1" placeholder="1" class="around mt-3">
-                        </div>
-                        <div class="col-9">
-                            <div class="row product-title">Okra</div>
-                            <div class="row product-sub">350</div>
-                        </div>
-                    </div>
-                    <!--Card details-->
-                </div>
+                {#                <div class="col-lg-4 col-md-6 mb-4">#}
+                {##}
+                {#                    <!--Card-->#}
+                {#                    <div class="card">#}
+                {##}
+                {#                        <!--Card image-->#}
+                {#                        <div class="view overlay">#}
+                {#                            <img src="../static/img/Nugget1383770571120.jpeg" class="card-img-top product-img" alt="">#}
+                {#                            <a>#}
+                {#                                <div class="mask rgba-white-slight"></div>#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {#                        <!--Card image-->#}
+                {##}
+                {#                    </div>#}
+                {#                    <!--Card-->#}
+                {#                    <!--Card details-->#}
+                {#                    <div class="row">#}
+                {#                        <div class="col-3" style="vertical-align: middle;">#}
+                {#                            <input type="number" min="0" max="100" step="1" placeholder="1" class="around mt-3">#}
+                {#                        </div>#}
+                {#                        <div class="col-9">#}
+                {#                            <div class="row product-title">Pepper Soup</div>#}
+                {#                            <div class="row product-sub">750</div>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                    <!--Card details-->#}
+                {#                </div>#}
+                {#                <!--Grid column-->#}
+                {##}
+                {#                <!--Third column-->#}
+                {#                <div class="col-lg-4 col-md-6 mb-4">#}
+                {##}
+                {#                    <!--Card-->#}
+                {#                    <div class="card">#}
+                {##}
+                {#                        <!--Card image-->#}
+                {#                        <div class="view overlay">#}
+                {#                            <img src="../static/img/maggi-samosa-recipe-m.jpg" class="card-img-top product-img" alt="">#}
+                {#                            <a>#}
+                {#                                <div class="mask rgba-white-slight"></div>#}
+                {#                            </a>#}
+                {#                        </div>#}
+                {#                        <!--Card image-->#}
+                {##}
+                {#                    </div>#}
+                {#                    <!--Card-->#}
+                {#                    <!--Card details-->#}
+                {#                    <div class="row">#}
+                {#                        <div class="col-3" style="vertical-align: middle;">#}
+                {#                            <input type="number" min="0" max="100" step="1" placeholder="1" class="around mt-3">#}
+                {#                        </div>#}
+                {#                        <div class="col-9">#}
+                {#                            <div class="row product-title">Okra</div>#}
+                {#                            <div class="row product-sub">350</div>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                    <!--Card details-->#}
+                {#                </div>#}
                 <!--Third column-->
 
             </div>
@@ -328,7 +330,7 @@
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-<script src="../static/bootstrap/js/bootstrap.bundle.min.js"
+<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"
         integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
         crossorigin="anonymous"></script>
 </body>
