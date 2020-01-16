@@ -2,12 +2,15 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
-# Create your views here.
-from ordering.models import User
+from ordering.models import *
 
 
 def menu(request):
-    return render(request, 'landingup.html')
+    groups = ProductGroup.objects.all().order_by("name")
+    context = {
+        'groups': groups
+    }
+    return render(request, 'menu.html', context)
 
 
 def user(request):
@@ -21,7 +24,7 @@ def cart(request):
 
 def signup(request):
     if request.method == "GET":
-        return redirect('registration/register.html')
+        return render(request, 'registration/register.html')
     else:
         email = request.POST['email']
         first_name = request.POST['first_name']
@@ -52,3 +55,7 @@ def edit_user(request):
     user.last_name = last_name
     user.save()
     return redirect('user')
+
+
+def add_to_cart(request):
+    return None

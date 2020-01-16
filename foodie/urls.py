@@ -22,7 +22,9 @@ from ordering import views
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
+                  path('add-cart/', views.add_to_cart, name="add to cart"),
                   path('register/', views.signup, name="register"),
                   path('', include('django.contrib.auth.urls')),
                   path('', include('ordering.urls')),
-              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+              + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

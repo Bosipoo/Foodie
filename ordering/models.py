@@ -59,7 +59,7 @@ def create_customer(sender, instance, created, **kwargs):
 
 
 @receiver(post_save, sender=User)
-def save_employee(sender, instance, **kwargs):
+def save_customer(sender, instance, **kwargs):
     instance.customer.save()
 
 
@@ -67,35 +67,48 @@ class Admin(models.Model):
     """This represents an administrator in our application"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.user.get_full_name()
+
 
 class Customer(models.Model):
     """This represents a customer in our application"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     address = models.TextField()
-    phone = models.IntegerField(null=True)
+    phone = models.CharField(null=True, max_length=11)
+
+    def __str__(self):
+        return self.user.get_full_name()
 
 
-class Payment(models.Model):
-    """This represents a transaction in our application"""
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    card_type = models.CharField(max_length=20)
-    card_no = models.IntegerField()
-
-
-class Group(models.Model):
+class ProductGroup(models.Model):
     """This represents a product group in our application"""
     name = models.CharField(max_length=20)
 
-
-class SubGroup(models.Model):
-    """This represents a product subgroup in our application"""
-    name = models.CharField(max_length=20)
-    group = models.ForeignKey(to=Group, on_delete=models.CASCADE, related_name='subgroups')
+    def __str__(self):
+        return self.name
 
 
 class Product(models.Model):
     """This represents a product in our application"""
     name = models.CharField(max_length=25)
-    # image = models.ImageField()
+    image = models.ImageField(default="image not found.jpg")
     price = models.FloatField()
-    subgroup = models.ForeignKey(SubGroup, on_delete=models.CASCADE)
+    group = models.ForeignKey(ProductGroup, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+
+class Order(models.Model):
+    """This represents a transaction in our application"""
+    DELIVERY_STATUS = [('p', 'Pending'), ('c', 'Confirmed'), ('d', 'Delivered')]
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.IntegerField()
+    amount = models.FloatField()
+    order_no = models.CharField(max_length=10)
+    delivery_status = models.CharField(choices=DELIVERY_STATUS, max_length=10, default='p')
+
+    def __str__(self):
+        return self.order_no, " - ", self.product, " - ", self.delivery_status

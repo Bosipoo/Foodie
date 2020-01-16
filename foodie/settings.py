@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ordering.apps.OrderingConfig',
+    'django.contrib.humanize'
 ]
 
 MIDDLEWARE = [
@@ -124,4 +125,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
+MEDIA_ROOT = 'media'
+# STATIC_ROOT = 'static'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
