@@ -2,27 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c78d52d5-f7dd-451d-9c1e-835847a9f9ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/BFV11503_CheddarRanchPopcornChicken-ThumbTextless1080.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Nugget1383770571120.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/chicken-marinade-triple-citrus-14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/full_chicken.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/grilled_bbq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/image not found.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/maggi-samosa-recipe-m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/meatpieN1-e1550605608381.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordering/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordering/templatetags/formattings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/Moi-moi-1024x623-e1567325379605-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/Sweet-Plantains-3-e1564764628994.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/coconutrice.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/coleslaw.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cow_tail_ps.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/egusi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/fried_rice.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/honey-garlic-steak-bites-4-500x375.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/italian_boiled_beef.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/jollof_rice_QWgr1xg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/ofada.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/soups-ogbonno.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/ugu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/waldorf.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/specials.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/foodie/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/foodie/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/migrations/0002_auto_20200114_1941.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ordering/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/landingup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +45,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ordering" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,17 +54,18 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\Foodie\templates" />
+      <recent name="C:\Users\User\PycharmProjects\Foodie\ordering" />
+      <recent name="C:\Users\User\PycharmProjects\Foodie\media" />
+      <recent name="C:\Users\User\PycharmProjects\Foodie\templates\admin" />
+      <recent name="C:\Users\User\PycharmProjects\foodie\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\PycharmProjects\foodie\templates\registration" />
       <recent name="C:\Users\User\PycharmProjects\foodie\static" />
       <recent name="C:\Users\User\PycharmProjects\foodie\templates\Images" />
       <recent name="C:\Users\User\PycharmProjects\foodie\static\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\PycharmProjects\Foodie\ordering" />
-      <recent name="C:\Users\User\PycharmProjects\Foodie\media" />
-      <recent name="C:\Users\User\PycharmProjects\Foodie\templates\admin" />
-      <recent name="C:\Users\User\PycharmProjects\foodie\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -135,8 +133,16 @@
       <workItem from="1579057659847" duration="487000" />
       <workItem from="1579079144591" duration="13565000" />
       <workItem from="1579152147453" duration="741000" />
-      <workItem from="1579198115294" duration="4024000" />
+      <workItem from="1579198115294" duration="5943000" />
     </task>
+    <task id="LOCAL-00001" summary="Django setuup">
+      <created>1579210222036</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579210222036</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,5 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Django setuup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Django setuup" />
   </component>
 </project>
