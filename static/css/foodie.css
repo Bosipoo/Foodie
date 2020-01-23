@@ -16,7 +16,7 @@
 }
 .user{
 	font-family: 'Montserrat', sans-serif;
-	font-style: bold;
+	/*font-style: bold;*/
 	font-size: 15px;
 	color: #0A2933;
 	display: block;
@@ -538,7 +538,7 @@ h5 span {
     100% {
         transform: translateY(-9px) rotate(135deg);
     }
-} */
+}
 
 .affix {
     padding: 0;
@@ -582,7 +582,7 @@ h5 span {
   }
   
   .sidebar a {
-    padding: 6px 8px 6px 16px;
+    padding: 6px 8px 6px 8px;
     text-decoration: none;
     font-size: 19px;
     color: #828282;
@@ -616,9 +616,9 @@ h4 span {
 }
 #shift{
     position: absolute;
-    will-change: transform; 
-    top: 0px; 
-    left: 0px; 
+    will-change: transform;
+    top: 0px;
+    left: 0px;
     transform: translate3d(1080px, 65px, 0px);
 }
 #shift a{
@@ -631,7 +631,7 @@ h4 span {
 
 .row-title{
     font-family: 'Montserrat', sans-serif;
-	font-style: bold;
+	/*font-style: bold;*/
     font-size: 20px;
     font-weight: 600;
 }
@@ -641,20 +641,19 @@ h4 span {
 }
 .product-title{
     font-family: 'Montserrat', sans-serif;
-	font-style: bold;
+	/*font-style: bold;*/
     font-size: 19px;
     font-weight: 600;
+    text-align: right;
 }
 .product-sub{
     font-family: 'Montserrat', sans-serif;
     font-size: 19px;
     font-weight: 300;
+    text-align: right;
 }
 .around{
     border: 1px solid#A9A9A9;
-}
-.rounded-circle{
-    border-radius: 50%;
 }
 /* Cart Quantity Increment & Decrement*/
 #myform {

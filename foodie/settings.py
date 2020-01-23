@@ -28,6 +28,9 @@ LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'menu'
 LOGOUT_REDIRECT_URL = 'menu'
+SESSION_SAVE_EVERY_REQUEST = True
+PAYPAL_IDENTITY_TOKEN = 'JSCRWJL9R268S'
+PAYPAL_TEST = True
 
 ALLOWED_HOSTS = []
 
@@ -41,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ordering.apps.OrderingConfig',
-    'django.contrib.humanize'
+    'django.contrib.humanize',
+    'paypal.standard.pdt'
 ]
 
 MIDDLEWARE = [

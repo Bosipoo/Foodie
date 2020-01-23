@@ -1,4 +1,5 @@
 {% load static %}
+{% load formattings %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -78,50 +79,20 @@
 </nav>
 
 <main role="main" class="container">
-    <!-- <div class="starter-template"> -->
-    <div class="row center" id="set-head">ACCOUNT SETTINGS</div>
-    <br>
-    <div class="row center text-center">
-        <span id="round-orange">{{ user.first_name|first }}{{ user.last_name|first }}</span>
-        &nbsp
-        &nbsp
-        <span class="set-name center">{{ user.first_name }} {{ user.last_name }}</span>
-    </div>
-    <br>
-    <div class="row center">
-        <form method="post" action="{% url 'edit' %}">
-            {% csrf_token %}
-            <div class="row">
-                <div class="form-group col-6">
-                    <label for="firstname" class="set-label">First Name</label>
-                    <input type="text" class="form-control" id="firstname" aria-describedby="firstname"
-                           name="first_name" value="{{ user.first_name }}">
-                </div>
-                <div class="form-group col-6">
-                    <label for="lastname" class="set-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastname" aria-describedby="lastname" name="last_name"
-                           value="{{ user.last_name }}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-6">
-                    <label for="phone" class="set-label">Phone Number</label>
-                    <input type="text" class="form-control" id="phone" aria-describedby="phone" name="phone"
-                           value="{{ user.customer.phone }}">
-                </div>
-                <div class="form-group col-6">
-                    <label for="address" class="set-label">Address</label>
-                    <textarea class="form-control" id="address" name="address">{{ user.customer.address }}</textarea>
-                </div>
-            </div>
-            <button type="submit" class="btn center set-button mx-auto">Update Settings</button>
+
+    Payment Not Successful.
+    <!--Proceed Button-->
+    <div class="row">
+        <div class="col-6"></div>
+        <form action="#" class="signin col-6">
+            <br>
+            <button class="btn btn-lg btn-block proceed" type="submit"><span class="proceed">Back To Menu</span>
+            </button>
         </form>
     </div>
+    <!--Proceed Button-->
 
-
-    <!-- </div> -->
 </main><!-- /.container -->
-
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

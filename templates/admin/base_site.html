@@ -1,9 +1,10 @@
 {% extends "admin/base.html" %}
+{% load static %}
 
-{% block title %}{{ title }} | Foodie{% endblock %}
-
+{% block title %}Admin Panel | Foodie{% endblock %}
 {% block branding %}
-<h1 id="site-name"><a href="{% url 'admin:index' %}">Foodie</a></h1>
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">Foodie</a></h1>
 {% endblock %}
+{% block content_title %}<h1><strong>Admin Panel</strong></h1>{% endblock %}
 
 {% block nav-global %}{% endblock %}

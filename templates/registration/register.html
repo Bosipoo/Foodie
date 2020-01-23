@@ -36,6 +36,10 @@
             <div class="input-group">
                 <input class="input--style-2" type="text" placeholder="Last Name" name="last_name" required>
             </div>
+            <span class="user p-b-11"><b>Phone Number</b></span>
+            <div class="input-group">
+                <input class="input--style-2" type="tel" placeholder="Phone Number" name="phone" required>
+            </div>
             <span class="user p-b-11"><b>Email</b></span>
             <div class="input-group">
                 <input class="input--style-2" type="email" placeholder="Email" name="email" required>
@@ -46,7 +50,7 @@
             </div>
             <br>
             <button class="btn btn-lg btn-block bt1-color p-b-11" type="submit">SIGN UP</button>
-            <label id="signin">Already Have An Account? <a href="login.html" id="link1"><b>Sign In</b></a></label>
+            <label id="signin">Already Have An Account? <a href="{% url 'login' %}" id="link1"><b>Sign In</b></a></label>
         </form>
     </div>
     <div class="col-lg-6 col-md-6 d-none d-sm-block">

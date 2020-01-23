@@ -95,7 +95,7 @@ class Product(models.Model):
     image = models.ImageField(default="image not found.jpg")
     price = models.FloatField()
     group = models.ForeignKey(ProductGroup, on_delete=models.CASCADE)
-    is_special = models.BooleanField(default=False)
+    is_special = models.BooleanField(_('Special'), default=False)
 
     def __str__(self):
         return self.name

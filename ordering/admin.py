@@ -26,8 +26,22 @@ class UserAdmin(DjangoUserAdmin):
     search_fields = ('email', 'first_name', 'last_name')
     ordering = ('email',)
 
+
+def make_special(modeladmin, request, queryset):
+    queryset.update(is_special=True)
+
+
+make_special.short_description = "Mark selected Products as special"
+
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name', 'price', 'is_special']
+    ordering = ['name']
+    actions = [make_special]
+
+
 admin.site.register(Customer)
 admin.site.register(Admin)
 admin.site.register(ProductGroup)
-admin.site.register(Product)
+admin.site.register(Product, ProductAdmin)
 admin.site.register(Order)

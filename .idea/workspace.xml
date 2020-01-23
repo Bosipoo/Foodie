@@ -2,24 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c78d52d5-f7dd-451d-9c1e-835847a9f9ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/Moi-moi-1024x623-e1567325379605-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Sweet-Plantains-3-e1564764628994.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/coconutrice.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/coleslaw.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/cow_tail_ps.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/egusi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/fried_rice.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/honey-garlic-steak-bites-4-500x375.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/italian_boiled_beef.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/jollof_rice_QWgr1xg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/ofada.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/soups-ogbonno.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/ugu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/waldorf.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/specials.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/invalid_payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/valid_payment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/foodie/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/foodie/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ordering/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/templatetags/formattings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/templatetags/formattings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/foodie.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/foodie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/clear-black-18dp/1x/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/clear-black-18dp/2x/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/specials.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/specials.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,15 +34,40 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="ef34a991-92df-4794-9dc2-f8c7095ddfb8" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\User\PycharmProjects\Foodie\.idea" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1WNwL2CULVRZUutoHf3E2kIeCSY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -43,6 +75,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
@@ -52,20 +85,22 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\Foodie\templates\registration" />
+      <recent name="C:\Users\User\PycharmProjects\Foodie\templates" />
+      <recent name="C:\Users\User\PycharmProjects\foodie\templates\registration" />
+      <recent name="C:\Users\User\PycharmProjects\foodie\static" />
+      <recent name="C:\Users\User\PycharmProjects\foodie\templates\Images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\PycharmProjects\Foodie\templates" />
       <recent name="C:\Users\User\PycharmProjects\Foodie\ordering" />
       <recent name="C:\Users\User\PycharmProjects\Foodie\media" />
       <recent name="C:\Users\User\PycharmProjects\Foodie\templates\admin" />
       <recent name="C:\Users\User\PycharmProjects\foodie\templates" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\PycharmProjects\foodie\templates\registration" />
-      <recent name="C:\Users\User\PycharmProjects\foodie\static" />
-      <recent name="C:\Users\User\PycharmProjects\foodie\templates\Images" />
-      <recent name="C:\Users\User\PycharmProjects\foodie\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -133,7 +168,14 @@
       <workItem from="1579057659847" duration="487000" />
       <workItem from="1579079144591" duration="13565000" />
       <workItem from="1579152147453" duration="741000" />
-      <workItem from="1579198115294" duration="5943000" />
+      <workItem from="1579198115294" duration="17838000" />
+      <workItem from="1579281650530" duration="2737000" />
+      <workItem from="1579335561730" duration="7143000" />
+      <workItem from="1579353263259" duration="13860000" />
+      <workItem from="1579470708732" duration="1078000" />
+      <workItem from="1579505705224" duration="1038000" />
+      <workItem from="1579663049096" duration="5579000" />
+      <workItem from="1579720453921" duration="9105000" />
     </task>
     <task id="LOCAL-00001" summary="Django setuup">
       <created>1579210222036</created>
@@ -142,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579210222036</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Django setuup">
+      <created>1579241676369</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579241676369</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

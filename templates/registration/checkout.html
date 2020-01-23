@@ -1,4 +1,5 @@
 {% load static %}
+{% load formattings %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -78,50 +79,22 @@
 </nav>
 
 <main role="main" class="container">
-    <!-- <div class="starter-template"> -->
-    <div class="row center" id="set-head">ACCOUNT SETTINGS</div>
-    <br>
-    <div class="row center text-center">
-        <span id="round-orange">{{ user.first_name|first }}{{ user.last_name|first }}</span>
-        &nbsp
-        &nbsp
-        <span class="set-name center">{{ user.first_name }} {{ user.last_name }}</span>
-    </div>
-    <br>
-    <div class="row center">
-        <form method="post" action="{% url 'edit' %}">
-            {% csrf_token %}
-            <div class="row">
-                <div class="form-group col-6">
-                    <label for="firstname" class="set-label">First Name</label>
-                    <input type="text" class="form-control" id="firstname" aria-describedby="firstname"
-                           name="first_name" value="{{ user.first_name }}">
-                </div>
-                <div class="form-group col-6">
-                    <label for="lastname" class="set-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastname" aria-describedby="lastname" name="last_name"
-                           value="{{ user.last_name }}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-6">
-                    <label for="phone" class="set-label">Phone Number</label>
-                    <input type="text" class="form-control" id="phone" aria-describedby="phone" name="phone"
-                           value="{{ user.customer.phone }}">
-                </div>
-                <div class="form-group col-6">
-                    <label for="address" class="set-label">Address</label>
-                    <textarea class="form-control" id="address" name="address">{{ user.customer.address }}</textarea>
-                </div>
-            </div>
-            <button type="submit" class="btn center set-button mx-auto">Update Settings</button>
+
+    {{ form.render }}
+    <!--Proceed Button-->
+    <div class="row">
+        <div class="col-6"></div>
+        <form action="#" class="signin col-6">
+            <br>
+            <button class="btn btn-lg btn-block proceed" type="submit"><span class="proceed">PROCEED        </span>
+                <img src="{% static 'img/arrow_forward-white-18dp/2x/baseline_arrow_forward_white_18dp.png' %}"
+                     id="arrow"
+                     class="mb-1"></button>
         </form>
     </div>
+    <!--Proceed Button-->
 
-
-    <!-- </div> -->
 </main><!-- /.container -->
-
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -139,6 +112,62 @@
         console.log("Clicked menu");
         $("#mainListDiv").toggleClass("show_list");
         $("#mainListDiv").fadeIn();
+    });
+</script>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body> -->
+
+<!--Cart Quantity + & - -->
+<script>
+    jQuery(document).ready(function () {
+        // This button will increment the value
+        $('.qtyplus').click(function (e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            fieldName = $(this).attr('field');
+            // Get its current value
+            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            // If is not undefined
+            if (!isNaN(currentVal)) {
+                // Increment
+                $('input[name=' + fieldName + ']').val(currentVal + 1);
+            } else {
+                // Otherwise put a 0 there
+                $('input[name=' + fieldName + ']').val(0);
+            }
+        });
+        // This button will decrement the value till 0
+        $(".qtyminus").click(function (e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            fieldName = $(this).attr('field');
+            // Get its current value
+            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+            // If it isn't undefined or its greater than 0
+            if (!isNaN(currentVal) && currentVal > 0) {
+                // Decrement one
+                $('input[name=' + fieldName + ']').val(currentVal - 1);
+            } else {
+                // Otherwise put a 0 there
+                $('input[name=' + fieldName + ']').val(0);
+            }
+        });
+    });
+</script>
+<script>
+    function multiplyBy() {
+        num1 = document.getElementById("amount").value;
+        document.getElementById("result").innerHTML = num1;
+    }
+</script>
+<!--Remove Card Row 1-->
+<script>
+    $(document).ready(function () {
+        $("#close").click(function () {
+            $("#1").remove();
+        });
     });
 </script>
 </body>
