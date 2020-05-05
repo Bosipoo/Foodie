@@ -5,7 +5,9 @@ from django.shortcuts import redirect, reverse
 from django.views.decorators.http import require_GET
 from paypal.standard.pdt.views import process_pdt
 
+from foodie import settings
 from ordering.models import *
+from .forms import ExtPayPalPaymentsForm
 
 
 def menu(request):
@@ -65,7 +67,6 @@ def edit_user(request):
 
 
 from django.shortcuts import render
-from paypal.standard.forms import PayPalPaymentsForm
 
 
 @require_GET
@@ -88,24 +89,44 @@ def payment(request):
     return render(request, 'invalid_payment.html', context)
 
 
+# @login_required
+# def checkout(request):
+#     # What you want the button to do.
+#     paypal_dict = {
+#         "currency_code": "USD",
+#         "business": request.user.email,
+#         "amount": request.POST['total'],
+#         "item_name": 'Food from Foodie',
+#         "invoice": 10001,
+#         "notify_url": request.build_absolute_uri(reverse('paypal-pdt')),
+#         "return": request.build_absolute_uri(reverse('payment')),
+#         "cancel_return": request.build_absolute_uri(reverse('menu')),
+#         # "custom": "premium_plan",  # Custom command to correlate to some function later (optional)
+#     }
+#
+#     # Create the instance.
+#     form = PayPalPaymentsForm(initial=paypal_dict)
+#     context = {"form": form}
+#     return render(request, "checkout.html", context)
+
+
 @login_required
 def checkout(request):
-    # What you want the button to do.
-    paypal_dict = {
-        "currency_code": "USD",
-        "business": request.user.email,
-        "amount": request.POST['total'],
-        "item_name": 'Food from Foodie',
-        "invoice": 10001,
-        "notify_url": request.build_absolute_uri(reverse('paypal-pdt')),
-        "return": request.build_absolute_uri(reverse('payment')),
-        "cancel_return": request.build_absolute_uri(reverse('menu')),
-        # "custom": "premium_plan",  # Custom command to correlate to some function later (optional)
-    }
-
-    # Create the instance.
-    form = PayPalPaymentsForm(initial=paypal_dict)
-    context = {"form": form}
+    price = 0
+    for key, value in request.session.get('cart', dict()).items():
+        product_price = Product.objects.get(id=value['product_id']).price
+        price += int(value['quantity']) * product_price
+    # paypal_dict = {"business": settings.PAYPAL_RECEIVER_EMAIL,
+    #                "amount": price,
+    #                "item_name": 'Food from Foodie',
+    #                "invoice": "103847098",
+    #                "notify_url": request.build_absolute_uri(reverse('paypal-pdt')),
+    #                "return_url": request.build_absolute_uri(reverse('payment')),
+    #                "cancel_return": request.build_absolute_uri(reverse('menu')), }
+    # form = ExtPayPalPaymentsForm(initial=paypal_dict)
+    cart = request.session.get('cart', dict())
+    # context = {"form": form, "cart": cart, "total": price}
+    context = {"cart": cart, "total": price}
     return render(request, "checkout.html", context)
 
 
@@ -125,6 +146,7 @@ def add_to_cart(request):
 def specials(request):
     specials = Product.objects.filter(is_special=True)
     return render(request, 'specials.html', {'specials': specials, 'quantity': 0})
+
 
 #
 # @login_required
